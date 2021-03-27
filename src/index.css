@@ -35,10 +35,47 @@ code {
 }
 
 .provider-modal {
-  width: 75vw !important;
-  max-width: 75vw !important;
-  position: absolute;
-  top: 30%;
-  left: 50%;
-  transform: translate(-50%, -50%) !important;
+  width: 70vw;
+  max-width: 100%;
+}
+
+.provider-form {
+  font-size: 14px;
+  padding: 2px 5px;
+}
+.provider-info {
+  overflow: auto;
+}
+
+.provider-info table {
+  border-spacing: 100px 0;
+  text-align: center;
+  border-collapse: collapse;
+  table-layout: fixed;
+  border: 3px solid #ddd;
+  width: 100% !important;
+}
+.provider-info tbody {
+  display: block;
+  width: 100%;
+  overflow: auto;
+  height: 200px;
+}
+
+.provider-info tr:nth-child(even) {
+  background-color: #dddddd;
+}
+
+.provider-info td {
+  vertical-align: top;
+  text-align: left;
+  white-space:pre;
+}
+
+.provider-info th {
+  vertical-align: top;
+  text-align: left;
+}
+.provider-info p {
+  margin-bottom: 0;
 }

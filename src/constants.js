@@ -43,7 +43,7 @@ export const STATE_LABEL_VALUES = [
     { 'label':'Oklahoma', 'value': 'OK'},
     { 'label':'Oregan', 'value': 'OR'},
     { 'label':'Palau', 'value': 'PW'},
-    { 'label':'Pennsilvania', 'value': 'PA'},
+    { 'label':'Pennsylvania', 'value': 'PA'},
     { 'label':'Puerto Rico', 'value': 'PR'},
     { 'label':'Rhode Island', 'value': 'RI'},
     { 'label':'South Carolina', 'value': 'SC'},

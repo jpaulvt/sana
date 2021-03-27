@@ -1,10 +1,9 @@
 import React, {useState, useEffect, useCallback} from 'react'
-import {Form} from 'react-bootstrap';
+import {Form, Row, Col} from 'react-bootstrap';
 import {STATE_LABEL_VALUES, NPI_URL} from '../constants';
 import {Debounce} from './Utilities';
 import axios from 'axios';
-import {Formik} from 'formik';
-import * as yup from 'yup';
+import ProviderInfo from './ProviderInfo'
 
 // This component renders the provider form which includes state, last name, first name, and provider results
 // It will automatically debounce user key input for 500ms before attempting to call the NPI API
@@ -12,70 +11,60 @@ import * as yup from 'yup';
 //
 function ProviderForm() {
     const [search, setSearch] = useState({state: '', providerLastName: '', providerFirstName: ''});
-    const [providerResults, setProviderResults] = useState('');
+    const [providerResults, setProviderResults] = useState('No results yet');
     // State for search status (whether there is a pending API request)
     const [, setIsSearching] = useState(false);
 
     const debouncedSearchTerm = Debounce(search, 500)
 
-    const getProviderResults = useCallback((lastName, firstName, state) => {
+    const getProviderResults = useCallback((firstName, lastName, state) => {
 
-        const url = NPI_URL + '?limit=200&first_name=' + firstName + '&last_name='
-            + lastName + '&state=' + state + '&version=2.0'
+        const url = NPI_URL + '?limit=10&first_name=' + firstName + '&last_name='
+            + lastName + '&state=' + state + '&version=2.1&use_first_name_alias=True'
         axios.get(url)
             .then((response) => {
-                setProviderResults(JSON.stringify(response))
+                if (response && response.data) {
+                    setProviderResults(response.data)
+                }
             })
     }, [])
 
     // This is triggered when debounced search term is triggered to automatically make a GET axios
     // call to fetch the response for the search terms entered
     useEffect(() => {
-
         if (debouncedSearchTerm.state !== '') {
-            let trimmedFirstName = debouncedSearchTerm.providerFirstName.trim()
-            trimmedFirstName = (trimmedFirstName.length >= 2) ? trimmedFirstName + '*' : trimmedFirstName
-            let trimmedLastName = debouncedSearchTerm.providerLastName.trim() + '*'
-            trimmedLastName = (trimmedLastName.length >= 2) ? trimmedLastName + '*' : trimmedLastName
-
-            if (trimmedFirstName.length >= 3 || trimmedLastName.length >= 3) {
+            let firstName = debouncedSearchTerm.providerFirstName
+            let lastName = debouncedSearchTerm.providerLastName
+            // Only append wildcard after two chars entered other NPI API fails
+            if (firstName.length >= 2) {
+                firstName += '*'
+            }
+            if (lastName.length >= 2) {
+                lastName += '*'
+            }
+            // Only search if firstname or lastname length long enough
+            if (firstName.length >= 3 || lastName.length >= 3) {
                 setIsSearching(true)
-                getProviderResults(trimmedLastName, trimmedFirstName, debouncedSearchTerm.state)
+                getProviderResults(firstName, lastName, debouncedSearchTerm.state)
                 setIsSearching(false)
             }
         }
     }, [debouncedSearchTerm, getProviderResults]);
 
-    // The form is validated with Yup/Formik before proceeding
     return (
-        <div>
-            <Formik validationSchema={yup.object({
-                firstName: yup.string().required("Required if last name empty"),
-                lastName: yup.string().required("Required if first name empty"),
-            })}
-                    initialValues={{
-                        firstName: '',
-                        lastName: '',
-                        stateName: '',
-                    }}
-                    onSubmit={{}}
-            >
-                {({
-                      values,
-                      touched,
-                      errors,
-                      handleChange
-                  }) => (
-                    <Form noValidate>
-                        <Form.Group controlId="formState">
-                            <Form.Label>Select Provider State</Form.Label>
-                            <Form.Control value={values.stateName} as="select" name='stateName'
+        <div className="provider-form">
+            First select a state where provider is located, then enter last name, first name, or both
+            <br/>
+            <br/>
+                    <Form>
+                        <Form.Group as={Row} controlId="formState">
+                            <Form.Label column sm="1">State</Form.Label>
+                            <Col sm="4">
+                            <Form.Control size="sm" as="select" name='stateName'
                                           onChange={(event) => {
-                                              handleChange(event)
                                               setSearch({...search, state: event.target.value})
                                             }
                                           }
-                                          isValid={touched.stateName}
                             >
                                 <option value="" selected disabled hidden>
                                     Select a State
@@ -85,38 +74,40 @@ function ProviderForm() {
                                     )
                                 )}
                             </Form.Control>
+                           </Col>
+
                         </Form.Group>
-                        <Form.Group controlId="formProviderLastName">
-                            <Form.Label>Provider Last Name</Form.Label>
-                            <Form.Control value={values.lastName} type="input" name="lastName"
-                                          placeholder="Enter Provider Last Name"
+                        {search.state !== "" &&
+
+                        <Form.Group as={Row} controlId="formProviderLastName">
+                            <Form.Label column sm="1">Last Name</Form.Label>
+                            <Col sm="4">
+                            <Form.Control size="sm" type="input" name="lastName"
+                                          placeholder="Enter Provider Last Name (2 characters min)"
                                           onChange={(event) => {
-                                              handleChange(event)
                                               setSearch({...search, providerLastName: event.target.value})
                                             }
                                           }
-                                          isValid={!errors.lastName}
 
                             />
+                            </Col>
+                            <Form.Label column sm="1">First Name</Form.Label>
+                            <Col sm="5">
+
+                                <Form.Control size="sm" type="input" name="firstName"
+                                              placeholder="Enter Provider First Name (2 characters min)"
+                                              onChange={(event) => {
+                                                  setSearch({...search, providerFirstName: event.target.value})
+                                              }
+                                              }
+                                />
+                            </Col>
                         </Form.Group>
-                        <Form.Group controlId="formProviderFirstName">
-                            <Form.Label>Provider First Name</Form.Label>
-                            <Form.Control value={values.firstName} type="input" name="firstName"
-                                          placeholder="Enter Provider First Name"
-                                          onChange={(event) => {
-                                              handleChange(event)
-                                              setSearch({...search, providerFirstName: event.target.value})
-                                            }
-                                          }
-                                          isValid={!errors.firstName}
-                            />
-                        </Form.Group>
+                        }
                     </Form>
-                )}
-            </Formik>
-            Results:
-            <div className="providerResults" style={{'padding-left': '30px'}}/>
-            {JSON.stringify(providerResults)}
+            {search.state !== "" && (search.providerFirstName.length >= 2 || search.providerLastName.length >= 2) &&
+                <ProviderInfo providerResults={providerResults}/>
+            }
         </div>
     )
 }
