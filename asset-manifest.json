@@ -1,0 +1,25 @@
+{
+  "files": {
+    "main.css": "/sana/static/css/main.093bbd73.chunk.css",
+    "main.js": "/sana/static/js/main.c2dba995.chunk.js",
+    "main.js.map": "/sana/static/js/main.c2dba995.chunk.js.map",
+    "runtime-main.js": "/sana/static/js/runtime-main.bde06c05.js",
+    "runtime-main.js.map": "/sana/static/js/runtime-main.bde06c05.js.map",
+    "static/css/2.150d169a.chunk.css": "/sana/static/css/2.150d169a.chunk.css",
+    "static/js/2.f4859eb9.chunk.js": "/sana/static/js/2.f4859eb9.chunk.js",
+    "static/js/2.f4859eb9.chunk.js.map": "/sana/static/js/2.f4859eb9.chunk.js.map",
+    "static/js/3.f39df16e.chunk.js": "/sana/static/js/3.f39df16e.chunk.js",
+    "static/js/3.f39df16e.chunk.js.map": "/sana/static/js/3.f39df16e.chunk.js.map",
+    "index.html": "/sana/index.html",
+    "static/css/2.150d169a.chunk.css.map": "/sana/static/css/2.150d169a.chunk.css.map",
+    "static/css/main.093bbd73.chunk.css.map": "/sana/static/css/main.093bbd73.chunk.css.map",
+    "static/js/2.f4859eb9.chunk.js.LICENSE.txt": "/sana/static/js/2.f4859eb9.chunk.js.LICENSE.txt"
+  },
+  "entrypoints": [
+    "static/js/runtime-main.bde06c05.js",
+    "static/css/2.150d169a.chunk.css",
+    "static/js/2.f4859eb9.chunk.js",
+    "static/css/main.093bbd73.chunk.css",
+    "static/js/main.c2dba995.chunk.js"
+  ]
+}
