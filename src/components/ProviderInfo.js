@@ -1,5 +1,5 @@
 // This component renders detailed provider info as a table displaying name, NPI, and addresses
-import React, {useState, useEffect, useCallback} from 'react'
+import React from 'react'
 
 function ProviderInfo(props) {
     let infoMsg = "No results found."
@@ -33,7 +33,6 @@ function ProviderInfo(props) {
                 </td>
             </tr>
         })
-        return "<div/>"
     }
 
     return (

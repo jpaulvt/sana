@@ -1,6 +1,7 @@
-# Getting Started with Create React App
+# Sana Case Study
 
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+I took a snapshot of the index.html at sanabenefits.com and added a "Provider Lookup" at the top of the menu:
 
 ## Available Scripts
 
