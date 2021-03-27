@@ -2,7 +2,6 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="e1ef3f82-664d-4e53-8410-25e0a0bd47f9" name="Default Changelist" comment="">
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/vercel.json" beforeDir="false" afterPath="$PROJECT_DIR$/vercel.json" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -98,7 +97,7 @@
       <workItem from="1616820999660" duration="8096000" />
       <workItem from="1616863797632" duration="392000" />
       <workItem from="1616864246451" duration="9432000" />
-      <workItem from="1616874218415" duration="2424000" />
+      <workItem from="1616874218415" duration="2686000" />
     </task>
     <task id="LOCAL-00001" summary="Initial commit">
       <created>1616797790837</created>
