@@ -1,9 +1,9 @@
 import React, {useState, useEffect, useCallback} from 'react'
 import {Form, Row, Col} from 'react-bootstrap';
-import {STATE_LABEL_VALUES, NPI_URL} from '../src/constants';
-import {Debounce} from '../src/components/Utilities';
+import {STATE_LABEL_VALUES, NPI_URL} from '../constants';
+import {Debounce} from '../components/Utilities';
 import axios from 'axios';
-import ProviderInfo from '../src/components/ProviderInfo'
+import ProviderInfo from '../components/ProviderInfo'
 
 // This component renders the provider form which includes state, last name, first name, and provider results
 // It will automatically debounce user key input for 500ms before attempting to call the NPI API
