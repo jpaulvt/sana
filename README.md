@@ -1,7 +1,26 @@
 # Sana Case Study
 
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
-I took a snapshot of the index.html at sanabenefits.com and added a "Provider Lookup" at the top of the menu:
+I took a snapshot of the index.html at sanabenefits.com and added a "Provider Lookup" link at the top of the menu which will render a Modal providing the NPI provider lookup functionality.
+
+#Demo
+Given that the NPI registry service rejects cross origin requests, I needed
+to use a CORS proxy to get the back end service working.
+
+You will first need to click here to enable the CORS proxy temporarily:
+https://cors-anywhere.herokuapp.com
+
+Once the CORS proxy is enabled from your IP address, you can see a demo of the React application here: https://main.d3avjb7v6ksqr8.amplifyapp.com/
+
+Click on the "Provider Lookup" top menu item (next to Log In) to pop up the modal that provides the NPI Provider Lookup.
+Once the modal pops up, select a state and enter at least two character of the provider's first or last name.
+No need to click a button to submit - automatically looks up the provider after user stops typing for 500 ms.
+
+![alt text](doc/Main_Page.png "Main Page")
+*Main Page*
+
+![alt text](doc/Modal_Example.png "Provider Lookup Modal")
+*Provider Lookup Modal*
 
 ## Available Scripts
 
