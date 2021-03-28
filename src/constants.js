@@ -60,4 +60,4 @@ export const STATE_LABEL_VALUES = [
     { 'label':'Wyoming', 'value': 'WY'}
 ]
 
-export const NPI_URL = 'https://npiregistry.cms.hhs.gov/api'
+export const NPI_URL = 'https://cors-anywhere.herokuapp.com/https://npiregistry.cms.hhs.gov/api'

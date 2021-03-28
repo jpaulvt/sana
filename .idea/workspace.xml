@@ -1,15 +1,9 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="e1ef3f82-664d-4e53-8410-25e0a0bd47f9" name="Default Changelist" comment="">
+    <list default="true" id="e1ef3f82-664d-4e53-8410-25e0a0bd47f9" name="Default Changelist" comment="Tweaks/fixes">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/api/ProviderForm.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/ProviderForm.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/Header.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/Header.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/ProviderInfo.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/ProviderInfo.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/ProviderModal.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/ProviderModal.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/index.css" beforeDir="false" afterPath="$PROJECT_DIR$/src/index.css" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/index.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/index.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/vercel.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/constants.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/constants.js" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -109,7 +103,8 @@
       <workItem from="1616863797632" duration="392000" />
       <workItem from="1616864246451" duration="9432000" />
       <workItem from="1616874218415" duration="4295000" />
-      <workItem from="1616881491371" duration="4766000" />
+      <workItem from="1616881491371" duration="7737000" />
+      <workItem from="1616973386216" duration="35000" />
     </task>
     <task id="LOCAL-00001" summary="Initial commit">
       <created>1616797790837</created>
@@ -118,7 +113,28 @@
       <option name="project" value="LOCAL" />
       <updated>1616797790837</updated>
     </task>
-    <option name="localTasksCounter" value="2" />
+    <task id="LOCAL-00002" summary="Tweaks/fixes">
+      <created>1616964081601</created>
+      <option name="number" value="00002" />
+      <option name="presentableId" value="LOCAL-00002" />
+      <option name="project" value="LOCAL" />
+      <updated>1616964081601</updated>
+    </task>
+    <task id="LOCAL-00003" summary="Tweaks/fixes">
+      <created>1616964952001</created>
+      <option name="number" value="00003" />
+      <option name="presentableId" value="LOCAL-00003" />
+      <option name="project" value="LOCAL" />
+      <updated>1616964952001</updated>
+    </task>
+    <task id="LOCAL-00004" summary="Tweaks/fixes">
+      <created>1616966346049</created>
+      <option name="number" value="00004" />
+      <option name="presentableId" value="LOCAL-00004" />
+      <option name="project" value="LOCAL" />
+      <updated>1616966346049</updated>
+    </task>
+    <option name="localTasksCounter" value="5" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -136,7 +152,8 @@
   </component>
   <component name="VcsManagerConfiguration">
     <MESSAGE value="Initial commit" />
-    <option name="LAST_COMMIT_MESSAGE" value="Initial commit" />
+    <MESSAGE value="Tweaks/fixes" />
+    <option name="LAST_COMMIT_MESSAGE" value="Tweaks/fixes" />
   </component>
   <component name="XDebuggerManager">
     <watches-manager>
