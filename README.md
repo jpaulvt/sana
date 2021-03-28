@@ -3,6 +3,12 @@
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
 I took a snapshot of the index.html at sanabenefits.com and added a "Provider Lookup" link at the top of the menu which will render a Modal providing the NPI provider lookup functionality.
 
+#Source Code
+
+See the project src/ directory to see the js and css that were created for this demo.
+The src/components directory contains the React components designed to implement the provider lookup.
+
+
 #Demo
 Given that the NPI registry service rejects cross origin requests, I needed
 to use a CORS proxy to get the back end service working.
