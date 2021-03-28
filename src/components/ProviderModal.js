@@ -1,6 +1,6 @@
 import React from 'react'
 import {Modal, Button} from 'react-bootstrap'
-import ProviderForm from '../api/ProviderForm'
+import ProviderForm from './ProviderForm'
 
 // This component provides a modal that will include the provider form
 function ProviderModal(props) {

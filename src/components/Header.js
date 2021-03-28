@@ -55,7 +55,7 @@ import ProviderModal from "./ProviderModal";
                           </ul>
                           <ul className="top-add-nav">
                               <li><a className="q-quote" href="https://sanabenefits.com/get-quote/">Get Quote</a></li>
-                              <li><a className="provider-lookup" href='javascript:void(0)' onClick={handleProviderLookupShow}>Provider Lookup</a></li>
+                              <li><a className="provider-lookup" onClick={handleProviderLookupShow}>Provider Lookup</a></li>
                               <li><a className="login" href="https://secure.sanabenefits.com/" target="_blank">Log In</a></li>
                           </ul>
                           <a href="#" className="m-nav-link" /></div>

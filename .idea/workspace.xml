@@ -3,8 +3,13 @@
   <component name="ChangeListManager">
     <list default="true" id="e1ef3f82-664d-4e53-8410-25e0a0bd47f9" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/api/ProviderForm.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/api/ProviderForm.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/api/ProviderForm.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/ProviderForm.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/Header.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/Header.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/ProviderInfo.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/ProviderInfo.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/components/ProviderModal.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/ProviderModal.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/index.css" beforeDir="false" afterPath="$PROJECT_DIR$/src/index.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/index.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/index.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/vercel.json" beforeDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -34,10 +39,14 @@
   </component>
   <component name="HighlightingSettingsPerFile">
     <setting file="file://$PROJECT_DIR$/node_modules/react-scripts/config/webpackDevServer.config.js" root0="SKIP_INSPECTION" />
-    <setting file="file://$PROJECT_DIR$/src/api/ProviderForm.js" root0="SKIP_INSPECTION" />
+    <setting file="file://$PROJECT_DIR$/src/components/ProviderForm.js" root0="SKIP_INSPECTION" />
+    <setting file="file://$PROJECT_DIR$/src/components/Main.js" root0="SKIP_INSPECTION" />
     <setting file="file://$PROJECT_DIR$/src/components/ProviderModal.js" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/node_modules/react-scripts/config/webpack.config.js" root0="SKIP_INSPECTION" />
     <setting file="file://$PROJECT_DIR$/src/components/ProviderInfo.js" root0="SKIP_INSPECTION" />
+    <setting file="file://$PROJECT_DIR$/src/components/Header.js" root0="SKIP_INSPECTION" />
+    <setting file="file://$PROJECT_DIR$/src/components/Utilities.js" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/src/index.js" root0="FORCE_HIGHLIGHTING" />
   </component>
   <component name="ProjectId" id="1qDbrZ7jan3GhL0ef8ok2BcoyGO" />
   <component name="ProjectViewState">
@@ -69,9 +78,9 @@
       <recent name="$PROJECT_DIR$/src" />
     </key>
     <key name="MoveFile.RECENT_KEYS">
+      <recent name="$PROJECT_DIR$/src/components" />
       <recent name="$PROJECT_DIR$/src" />
       <recent name="$PROJECT_DIR$/api" />
-      <recent name="$PROJECT_DIR$/src/components" />
     </key>
   </component>
   <component name="RunManager">
@@ -100,6 +109,7 @@
       <workItem from="1616863797632" duration="392000" />
       <workItem from="1616864246451" duration="9432000" />
       <workItem from="1616874218415" duration="4295000" />
+      <workItem from="1616881491371" duration="4766000" />
     </task>
     <task id="LOCAL-00001" summary="Initial commit">
       <created>1616797790837</created>
@@ -129,15 +139,6 @@
     <option name="LAST_COMMIT_MESSAGE" value="Initial commit" />
   </component>
   <component name="XDebuggerManager">
-    <breakpoint-manager>
-      <breakpoints>
-        <line-breakpoint enabled="true" type="javascript">
-          <url>file://$PROJECT_DIR$/src/components/ProviderInfo.js</url>
-          <line>18</line>
-          <option name="timeStamp" value="57" />
-        </line-breakpoint>
-      </breakpoints>
-    </breakpoint-manager>
     <watches-manager>
       <configuration name="JavascriptDebugType">
         <watch expression="providerResults" />

@@ -1,9 +1,9 @@
 import React, {useState, useEffect, useCallback} from 'react'
 import {Form, Row, Col} from 'react-bootstrap';
 import {STATE_LABEL_VALUES, NPI_URL} from '../constants';
-import {Debounce} from '../components/Utilities';
+import {Debounce} from './Utilities';
 import axios from 'axios';
-import ProviderInfo from '../components/ProviderInfo'
+import ProviderInfo from './ProviderInfo'
 
 // This component renders the provider form which includes state, last name, first name, and provider results
 // It will automatically debounce user key input for 500ms before attempting to call the NPI API
@@ -60,17 +60,17 @@ function ProviderForm() {
                         <Form.Group as={Row} controlId="formState">
                             <Form.Label column sm="1">State</Form.Label>
                             <Col sm="4">
-                            <Form.Control size="sm" as="select" name='stateName'
+                            <Form.Control size="sm" as="select" name='stateName' defaultValue=""
                                           onChange={(event) => {
                                               setSearch({...search, state: event.target.value})
                                             }
                                           }
                             >
-                                <option value="" selected disabled hidden>
+                                <option key="" value="" disabled hidden>
                                     Select a State
                                 </option>
                                 {STATE_LABEL_VALUES.map((state) => (
-                                        <option value={state.value}>{state.label}</option>
+                                        <option key={state.value} value={state.value}>{state.label}</option>
                                     )
                                 )}
                             </Form.Control>

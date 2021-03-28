@@ -16,18 +16,18 @@ function ProviderInfo(props) {
     }
 
     const renderTableData = (providerResults) => {
-        return providerResults.map((key) => {
-            return <tr>
-                <td>{key.basic.first_name + ' ' + (key.basic.middle_name ? key.basic.middle_name + ' ' : '') + key.basic.last_name + ' ' + key.basic.credential}</td>
+        return providerResults.map((key, index) => {
+            return <tr key={index}>
+                <td>{key.basic.first_name + ' ' + (key.basic.middle_name ? key.basic.middle_name + ' ' : '') + key.basic.last_name + ' ' + (key.basic.credential ? key.basic.credential : '')}</td>
                 <td>{key.enumeration_type}</td>
-                <td>{key.addresses.map((address) => {
+                <td>{key.addresses.map((address, index2) => {
                     return (
-                        <p>
-                        {address.address_purpose}:<br/>
+                        <p key={index2}>
+                            <u>{address.address_purpose}</u>:<br/>
                         {address.address_1 && address.address_1 + "\n"}
                         {address.address_2 && address.address_2 + "\n"}
                         {address.city}, {address.state} {address.postal_code.length === 9 ? address.postal_code.replace(/(\d{5})/, "$1-") : address.postal_code}
-                        {address.telephone_number && "\nPh: " + address.telephone_number}
+                        {address.telephone_number && "\nTelephone Number: " + address.telephone_number}
                     </p>)
                 })}
                 </td>
@@ -45,10 +45,14 @@ function ProviderInfo(props) {
                         <col style={{width : '20%'}}/>
                         <col style={{width : '40%'}}/>
                     </colgroup>
-                        <tr>
+                        <thead>
+                        <tr key="header">
                             {renderTableHeader()}
                         </tr>
+                        </thead>
+                    <tbody>
                         {renderTableData(props.providerResults.results)}
+                    </tbody>
                 </table>
             )}
         </div>

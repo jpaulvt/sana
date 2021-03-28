@@ -56,7 +56,6 @@ code {
   width: 100% !important;
 }
 .provider-info tbody {
-  display: block;
   width: 100%;
   overflow: auto;
   height: 200px;
@@ -65,17 +64,17 @@ code {
 .provider-info tr:nth-child(even) {
   background-color: #dddddd;
 }
-
 .provider-info td {
   vertical-align: top;
   text-align: left;
   white-space:pre;
 }
-
 .provider-info th {
   vertical-align: top;
   text-align: left;
+  background-color: #dddddd;
 }
+
 .provider-info p {
   margin-bottom: 0;
 }
