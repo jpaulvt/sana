@@ -21,7 +21,11 @@ function ProviderForm() {
 
         const url = NPI_URL + '?limit=10&first_name=' + firstName + '&last_name='
             + lastName + '&state=' + state + '&version=2.1&use_first_name_alias=True'
-        axios.get(url)
+        axios.get(url, {
+            headers: {
+                'Access-Control-Allow-Origin' : '*'
+            },
+        })
             .then((response) => {
                 if (response && response.data) {
                     setProviderResults(response.data)
